@@ -14,13 +14,13 @@ const config: GatsbyConfig = {
     // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-minimal-blog/gatsby-config.mjs
     siteTitle: `Rauta Blog`,
-    siteTitleAlt: `Rauta Blog - Gatsby Theme`,
-    siteHeadline: `Rauta Blog - Gatsby Theme from @lekoarts`,
-    siteUrl: `https://minimal-blog.lekoarts.de`,
-    siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
-    siteImage: `/banner.jpg`,
-    siteLanguage: `en`,
-    author: `@lekoarts_de`,
+    siteTitleAlt: `Rauta Blog - Personal Blog`,
+    siteHeadline: `Rauta Blog - Personal Blog`,
+    siteUrl: `https://rauta0127.github.io`,
+    siteDescription: `個人ブログ。エンジニアとしてのアウトプットや日常の日記など。エンジニアとしては主に機械学習系やデータ分析、Python周りによくいます。興味の幅としてはフルスタック`,
+    siteImage: `/banner/DPP_0841.jpg`,
+    siteLanguage: `ja`,
+    author: `@rauta0127`,
   },
   trailingSlash: `always`,
   plugins: [
@@ -31,7 +31,7 @@ const config: GatsbyConfig = {
         navigation: [
           {
             title: `Blog`,
-            slug: `/blog`,
+            slug: `/`,
           },
           {
             title: `About`,
@@ -41,11 +41,11 @@ const config: GatsbyConfig = {
         externalLinks: [
           {
             name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
+            url: ``,
           },
           {
             name: `Homepage`,
-            url: `https://www.lekoarts.de?utm_source=minimal-blog&utm_medium=Starter`,
+            url: ``,
           },
         ],
       },
