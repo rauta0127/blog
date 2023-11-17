@@ -16,7 +16,7 @@ const config: GatsbyConfig = {
     siteTitle: `Rauta Blog`,
     siteTitleAlt: `Rauta Blog - Personal Blog`,
     siteHeadline: `Rauta Blog - Personal Blog`,
-    siteUrl: `https://rauta0127.github.io`,
+    siteUrl: `https://rauta0127.github.io/blog`,
     siteDescription: `個人ブログ。エンジニアとしてのアウトプットや日常の日記など。エンジニアとしては主に機械学習系やデータ分析、Python周りによくいます。興味の幅としてはフルスタック`,
     siteImage: `/banner/DPP_0841.jpg`,
     siteLanguage: `ja`,
@@ -52,10 +52,15 @@ const config: GatsbyConfig = {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       // See the theme's README for all available options
       options: {
+        blogPath: `/posts`,
         navigation: [
           {
-            title: `Blog`,
+            title: `Home`,
             slug: `/`,
+          },
+          {
+            title: `Posts`,
+            slug: `/posts`,
           },
           {
             title: `About`,
