@@ -7,7 +7,10 @@ banner: ./DPP_0899.jpg
 ---
 
 import SpotifyPlayer from "./SpotifyPlayer";
-import ExternalHTML from "./ExternalHTML";
+import Iframely from "../../../src/components/iframely"
+// import "katex/dist/katex.min.css"
+
+<Iframely />
 
 
 Gatzby始めたばかりでまだどういうスタイルの投稿ができるかなどよくわかっていないので、色々なスタイルの投稿を試していく
@@ -22,6 +25,7 @@ Gatzby始めたばかりでまだどういうスタイルの投稿ができる�
 | Randy Savage            | Sarasota, FL | Elbow Drop         |
 | Vader                   | Boulder, CO  | Vader Bomb         |
 | Razor Ramon             | Chuluota, FL | Razor's Edge       |
+
 
 ### コード系
 
@@ -57,28 +61,49 @@ gatsby-plugin-twitterブラグインを追加した上で埋め込み用HTMLを�
 <SpotifyPlayer />
 
 
+### GoogleMap埋め込み
 
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.827853707492!2d139.76454987649285!3d35.6812405299723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2sTokyo%20Station!5e0!3m2!1sen!2sjp!4v1700195716738!5m2!1sen!2sjp" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+### リンクカード表示
+
+iframely.jsを導入することで対応できた
+
+[Gatsby](https://github.com/gatsbyjs/gatsby/)
+
+<div class="iframely-embed"><div class="iframely-responsive" styles="height: 140px; padding-bottom: 0;"><a href="https://github.com/gatsbyjs/gatsby" data-iframely-url="//iframely.net/mlzQxwo?card=small"></a></div></div>
+
+こちらの記事に倣いiframely.jsを導入すればできます。記事内では「templates/blog-post.js に Iframely を配置する」とありますが、mdxファイル内に直接記述しても動きます。
+
+<div class="iframely-embed"><div class="iframely-responsive" styles="height: 140px; padding-bottom: 0;"><a href="https://expfrom.me/gatsby-use-iframely.md/" data-iframely-url="//iframely.net/DVGKaYu"></a></div></div>
+
+
+### インタラクティブなグラフなど
+Python系でよく使うPlotlyなどで描画されたインタラクティブなグラフ。
+
+ローカルで作ったplotlyなどの記載方法はまだ見つかっていないが、[chart-studio](https://chart-studio.plotly.com/feed/#/)(登録必要)を使ってiframeを取得すれば可能
+
+<iframe id="igraph" scrolling="no" styles="border:none;" seamless="seamless" src="https://plotly.com/~chris/1638.embed" height="525" width="100%"></iframe>
+
+
+基本的には外部情報系を埋め込みたい時は、iframeを使っていけば良さそうである。
+
+---
 
 以下は色々試したがうまく動いていないので本日は諦めたもの。mdxファイル周りとかがしっかり理解できていない
 
 ### Latex数式
 
-$$a^2 + b^2$$
+$$x^3 + y^2$$
 
-うまく機能していない
+[gatsby-remark-katex](https://www.gatsbyjs.com/plugins/gatsby-remark-katex/)などを試してみたが、うまく機能していない
 
-### 外部HTMLファイルの読み込み
-
-外部HTMLファイルを読み込むことができなかった
-
-
-### インタラクティブなグラフなど
-Python系でよく使うPlotlyなどで描画されたインタラクティブなグラフ
+暫定的な対応策として、[Math Embed](https://mathembed.online/)というサービスを使って数式を表示させるURLを発行してiframeで表示させたりはできる。
+<iframe src="https://mathembed.online/embed/9hUPieFsGuUCazy4v6YU" styles="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe>
 
 
-### リンクカード表示
 
-This is the Github repository:
 
-[Gatsby](https://github.com/gatsbyjs/gatsby/)
+
 

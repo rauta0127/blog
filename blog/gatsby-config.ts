@@ -25,9 +25,18 @@ const config: GatsbyConfig = {
   trailingSlash: `always`,
   plugins: [
     `gatsby-plugin-twitter`,
+    // {
+    //   resolve: `gatsby-plugin-mdx`,
+		// 	options: {
+		// 		// defaultLayouts: {
+		// 		// 	default: require.resolve(`./src/components/mdxLayout.js`)
+		// 		// },
+		// 		remarkPlugins: [ require('remark-math'), require('remark-html-katex') ]
+		// 	}
+    // },
     {
       resolve: `gatsby-transformer-remark`,
-        options: {
+      options: {
         plugins: [
           {
             resolve: `gatsby-remark-katex`,
