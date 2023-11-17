@@ -24,6 +24,21 @@ const config: GatsbyConfig = {
   },
   trailingSlash: `always`,
   plugins: [
+    `gatsby-plugin-twitter`,
+    {
+      resolve: `gatsby-transformer-remark`,
+        options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
+              strict: `ignore`
+            }
+          }
+        ],
+      },
+    },
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       // See the theme's README for all available options

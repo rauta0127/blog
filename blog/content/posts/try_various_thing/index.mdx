@@ -1,0 +1,84 @@
+---
+title: 色々試す投稿
+date: 2023-11-16
+tags:
+    - Others
+banner: ./DPP_0899.jpg
+---
+
+import SpotifyPlayer from "./SpotifyPlayer";
+import ExternalHTML from "./ExternalHTML";
+
+
+Gatzby始めたばかりでまだどういうスタイルの投稿ができるかなどよくわかっていないので、色々なスタイルの投稿を試していく
+
+### テーブル
+通常のmarkdownでできることは当然ながらできる
+
+| Wrestler                | Origin       | Finisher           |
+| ----------------------- | ------------ | ------------------ |
+| Bret "The Hitman" Hart  | Calgary, AB  | Sharpshooter       |
+| Stone Cold Steve Austin | Austin, TX   | Stone Cold Stunner |
+| Randy Savage            | Sarasota, FL | Elbow Drop         |
+| Vader                   | Boulder, CO  | Vader Bomb         |
+| Razor Ramon             | Chuluota, FL | Razor's Edge       |
+
+### コード系
+
+```shell
+$ ls
+first-post     try_various_thing
+```
+
+```python
+import pandas as pd
+df = pd.DataFrame()
+```
+
+コードにハイライトをつけることもできる
+```python highlight=2
+import pandas as pd
+df = pd.DataFrame()
+```
+
+### X(Twitter)埋め込み
+
+gatsby-plugin-twitterブラグインを追加した上で埋め込み用HTMLをコピペ
+
+<blockquote class="twitter-tweet" data-theme="dark"><p lang="zxx" dir="ltr"><a href="https://t.co/2Gufkv3DXq">pic.twitter.com/2Gufkv3DXq</a></p>&mdash; X (@X) <a href="https://twitter.com/X/status/1716896883434799556?ref_src=twsrc%5Etfw">October 24, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+### Youtube埋め込み
+埋め込み用HTMLをコピペするだけで可能
+<iframe width="560" height="315" src="https://www.youtube.com/embed/adDA5VgM9O4?si=eGOYCeGRYZmgp0nG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### 音楽系埋め込み
+#### SpotifyPlayer
+
+<SpotifyPlayer />
+
+
+
+
+以下は色々試したがうまく動いていないので本日は諦めたもの。mdxファイル周りとかがしっかり理解できていない
+
+### Latex数式
+
+$$a^2 + b^2$$
+
+うまく機能していない
+
+### 外部HTMLファイルの読み込み
+
+外部HTMLファイルを読み込むことができなかった
+
+
+### インタラクティブなグラフなど
+Python系でよく使うPlotlyなどで描画されたインタラクティブなグラフ
+
+
+### リンクカード表示
+
+This is the Github repository:
+
+[Gatsby](https://github.com/gatsbyjs/gatsby/)
+
